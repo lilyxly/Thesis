@@ -46,7 +46,8 @@
 \usepackage{colortbl}
 \usepackage{floatrow}
 \usepackage{subfig}
-
+%\usepackage[backend=biber, sortcites=true]{biblatex}
+\raggedbottom
 \pagestyle{plain}
 
 %% This bit allows you to either specify only the files which you wish to
@@ -58,12 +59,11 @@
 \ifx\files\all \typeout{Including all files.} \else \typeout{Including only \files.} \includeonly{\files} \fi
 
 \begin{document}
-
 \include{cover}
 % Some departments (e.g. 5) require an additional signature page.  See
 % signature.tex for more information and uncomment the following line if
 % applicable.
-%\include{signature}
+\include{signature}
 \pagestyle{plain}
 \include{contents}
 \include{chap1}
@@ -73,9 +73,6 @@
 \include{chap5}
 \appendix
 \include{appa}
-\include{appb}
 \include{biblio}
-\printbibliography[heading=bibintoc]
-
 \end{document}
 
